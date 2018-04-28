@@ -13,11 +13,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class APIGatewayController {
 
+    /**
+     * GET TEST
+     * @return
+     */
     @GetMapping("/")
     public ResponseEntity server1() {
         return new ResponseEntity("Welcome. GATEWAY SERVER.", HttpStatus.OK);
     }
 
+    /**
+     * 새로운 ADMIN을 등록한다.
+     * @return
+     */
     @PostMapping("/users")
     public ResponseEntity server2() {
         return new ResponseEntity("success.", HttpStatus.CREATED);
